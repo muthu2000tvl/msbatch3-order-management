@@ -1,0 +1,19 @@
+spring:
+  profiles.active: dev
+---
+spring:
+  profiles: dev
+server:
+  servlet:
+    context-path: /dev
+  port : 8888
+  
+---
+spring:
+  profiles: production
+server:
+  servlet:
+    context-path: /prod
+  port : 9999
+     
+    
