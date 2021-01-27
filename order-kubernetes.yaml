@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: order-management-deployment
+   labels:
+     app: order-management
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: order-management
+  template:
+    metadata:
+      labels:
+        app: order-management
+    spec:
+     containers:
+     - name: order-management
+       image: muthu2000tvl/order-kubernetes
+       ports:
+         - containerPort: 9999
